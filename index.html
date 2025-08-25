@@ -4,30 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kidpreneur Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <h1>🚀 Kidpreneur Hub</h1>
-    <p>Showcase your startup ideas. Get inspired. Be the next changemaker.</p>
+    <p>Share your startup idea & inspire others!</p>
   </header>
 
   <main>
+    <!-- Idea Submission -->
+    <section class="submit">
+      <h2>✍️ Submit Your Idea</h2>
+      <form id="idea-form">
+        <input type="text" id="student-name" placeholder="Your Name (optional)">
+        <input type="text" id="idea-title" placeholder="Startup Idea" required>
+        <textarea id="idea-problem" placeholder="What problem does it solve?" required></textarea>
+        <button type="submit">🚀 Add Idea</button>
+      </form>
+    </section>
+
+    <!-- Idea Wall -->
     <section class="ideas">
-      <h2>💡 Startup Idea Wall</h2>
-      <p>Explore creative ideas submitted by students.</p>
+      <h2>💡 Idea Wall</h2>
       <div id="idea-grid">
-        <!-- Cards will be added with JS later -->
-        <div class="idea-card">Example Idea #1</div>
-        <div class="idea-card">Example Idea #2</div>
+        <!-- Ideas will appear here -->
       </div>
     </section>
 
+    <!-- Chatbot -->
     <section class="chatbot">
       <h2>🤖 Meet InspireX</h2>
       <p>Your AI buddy for startup tips & advice</p>
       <div class="bot-frame">
-        <!-- Your Chatbase Embed -->
+        <!-- Chatbase Embed -->
         <script>
           (function(){
             if(!window.chatbase||window.chatbase("getState")!=="initialized"){
